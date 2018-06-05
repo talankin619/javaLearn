@@ -15,24 +15,13 @@ public class Zapomnil {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a =  Integer.parseInt(args[0]);
-        int b =  Integer.parseInt(args[1]);
-        int c =  Integer.parseInt(args[2]);
-        
-        System.out.println(ae(a, b, c));
+    int a = 3;
+    Films c =new Films("Иллюзионист", 1996, Films.norm);
+    Films b =new Films("Престиж", 2001, Films.good);
+    if(c.getReiting()>b.getReiting()){
+        System.out.println(c.getName()+" лучше");
+    }else{
+        System.out.println(b.getName()+" лучше");
     }
-    static int ae(int a, int b, int c){
-        int root=0;
-        int D = (int)pow(b,2) - 4*a*c;
-        System.out.println(4*a*c);
-        System.out.println(pow(b,2));
-        System.out.println("D: "+D);
-        if(D>0) {
-            root = ((int)pow(-b,2) - (int)sqrt(D))/2/a;      
-        }
-        int k = 0;
-       
-        return root;
     }
-    
 }
